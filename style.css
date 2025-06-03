@@ -29,12 +29,16 @@ body {
   justify-content: center;
   font-size: 2rem;
   border-radius: 10px;
-  transition: all ease-in-out 0.5s;
+  font-family: cursive;
+  color: black;
+  
+  
 }
 .box:hover{
-    transform: scale(1.1);
-    transition: all ease-in-out 0.5s;
+  transform: scale(1.1);
+   transition: all ease-in-out .5s;
 }
 .box:active{
+  transform: scale(0.85);
     background-color: #444040;
 }
