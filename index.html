@@ -1,22 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Tic Tac Toe</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="heading">The TIC TAC TOE Game</div>
+
   <div class="container">
-    <div class="box a1" id="0"></div>
-    <div class="box a2" id="1"></div>
-    <div class="box a3" id="2"></div>
-    <div class="box a4" id="3"></div>
-    <div class="box a5" id="4"></div>
-    <div class="box a6" id="5"></div>
-    <div class="box a7" id="6"></div>
-    <div class="box a8" id="7"></div>
-    <div class="box a9" id="8"></div>
+    <div class="box" id="0"></div>
+    <div class="box" id="1"></div>
+    <div class="box" id="2"></div>
+    <div class="box" id="3"></div>
+    <div class="box" id="4"></div>
+    <div class="box" id="5"></div>
+    <div class="box" id="6"></div>
+    <div class="box" id="7"></div>
+    <div class="box" id="8"></div>
   </div>
+
+  <div class="rematch">
+    <button>Rematch</button>
+  </div>
+
+  <div class="winBox">
+    <div class="winnerText">Player 1 won!</div>
+    <div class="btn"><button>OK</button></div>
+  </div>
+
+  <div class="points">
+    <div class="player">
+      <input type="text" id="p1name" placeholder="Player 1 => X" class="name-input" />
+      <div class="score" id="p1score">0</div>
+    </div>
+    <div class="line"></div>
+    <div class="player">
+      <input type="text" id="p2name" placeholder="Player 2 => O" class="name-input" />
+      <div class="score" id="p2score">0</div>
+    </div>
+  </div>
+
+  <div class="reset">
+    <button>Reset Score</button>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

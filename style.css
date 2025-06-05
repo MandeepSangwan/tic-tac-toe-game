@@ -3,42 +3,128 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  touch-action: manipulation;
+  background-color: #121212;
+  font-family:  cursive;
+}
 body {
-  height: 100vh;
-  background-color: #444040;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
-
+.heading {
+  margin-bottom: 40px;
+  font-size: 50px;
+  color: #f9f9f9;
+}
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 133px);
-  grid-template-rows: repeat(3, 133px);
-  background-color: beige;
-  border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: black;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 5px;
 }
-
 .box {
-  border: 2px solid black;
+  background-color: #1f1f1f;
+  border: 2px solid #333;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 40px;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.box:hover {
+  background-color: #2e2e2e;
+  transform: scale(1.05);
+}
+.box:active {
+  transform: scale(0.95);
+}
+.winBox {
+  border: 2px solid #444;
+  height: 250px;
+  width: 300px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #222;
+  color: white;
+  font-size: 24px;
+  border-radius: 12px;
+  position: absolute;
+  top: 30%;
+  z-index: 5;
+  animation: popup 0.4s ease-in-out;
+}
+@keyframes popup {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.btn button,
+.rematch button,
+.reset button {
   border-radius: 10px;
-  font-family: cursive;
-  color: black;
-  
-  
+  height: 40px;
+  width: 100px;
+  background-color: #00c2ff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
 }
-.box:hover{
-  transform: scale(1.1);
-   transition: all ease-in-out .5s;
+.btn button:active,
+.rematch button:active,
+.reset button:active {
+  transform: scale(0.9);
+  background-color: #009bc4;
 }
-.box:active{
-  transform: scale(0.85);
-    background-color: #444040;
+.points {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  color: white;
+}
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.name-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  outline: none;
+}
+#p1name { color: #ff6464; }
+#p2name { color: #6495ff; }
+.line {
+  width: 2px;
+  height: 80px;
+  background-color: white;
+}
+.score {
+  font-size: 24px;
+}
+.reset {
+  margin-top: 20px;
 }
