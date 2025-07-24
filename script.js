@@ -31,6 +31,10 @@ space.addEventListener("click", (e) => {
       move = 0;
     }
 
+    
+    player1Name = document.getElementById("p1name").value.trim() || "Player 1";
+    player2Name = document.getElementById("p2name").value.trim() || "Player 2";
+
     for (let combo of winning_combinations) {
       let [a, b, c] = combo;
       if (board[a] === board[b] && board[b] === board[c] && board[a] !== "") {
@@ -47,6 +51,7 @@ space.addEventListener("click", (e) => {
     }
   }
 });
+
 
 document.querySelector(".btn").addEventListener("click", () => {
   resetBoard();
